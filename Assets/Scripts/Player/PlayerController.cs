@@ -8,11 +8,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float speed;
     #endregion
-
-    void Start()
-    {
-
-    }
+    
     
     void Update()
     {
