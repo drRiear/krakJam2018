@@ -20,5 +20,5 @@ public class EnemyCameraBehaviour : MonoBehaviour {
 		
 	}
 
-    private enum State { Iidle, Rotating };
+    private enum State { Idle, Rotating };
 }
