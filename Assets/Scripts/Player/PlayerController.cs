@@ -3,16 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-
     #region Inspector Vars
-
     [SerializeField] private float speed;
     #endregion
-
-    void Start()
-    {
-
-    }
     
     void Update()
     {
