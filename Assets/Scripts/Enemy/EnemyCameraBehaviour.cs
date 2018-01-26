@@ -6,56 +6,84 @@ public class EnemyCameraBehaviour : MonoBehaviour {
 
     #region Inspector Vars
     [Header("Rotation")]
-    [SerializeField] private float speedOfRotation;
     [SerializeField] private float angleOfRotation;
     [Header("View")]
     [SerializeField] private float distanceOfView;
     [SerializeField] private float angleOfView;
+    [SerializeField] private float inIdleTime;
     #endregion
 
     #region Private Vars
     [SerializeField] private State state = 0;
 
     private Quaternion startRotation;
-    private Quaternion destinationRotation = new Quaternion();
-    private float rototionLerpT;
+    private Quaternion finalRotation;
+
+    private float destinationZRotation;
+
+    private float rotationLerpT;
+
+    private float inIdleTimer;
     #endregion
 
     #region Unity Events
     void Start ()
     {
+        inIdleTimer = inIdleTime;
         startRotation = transform.rotation;
-        destinationRotation.eulerAngles = new Vector3(0.0f, 0.0f, angleOfRotation);
+        finalRotation.eulerAngles = new Vector3(0.0f, 0.0f, transform.rotation.eulerAngles.z + angleOfRotation);
     }
 	void Update ()
 	{
-	    SetState();
+        SetState();
 	}
     #endregion
     
     #region Private methods
     private void SetState()
     {
-        
         switch (state)
         {
             case State.Idle:
+                rotationLerpT = 0.0f;
+
+                inIdleTimer -= Time.deltaTime;
+
+                if (inIdleTimer <= 0.0f)
+                    state = State.Rotating;
 
                 break;
             case State.Rotating:
 
-                SetRotation(rototionLerpT);
-                rototionLerpT += Time.deltaTime;
+                inIdleTimer = inIdleTime;
+
+                SetRotation();
+
+                //print(rotationLerpT);
+
+                if (rotationLerpT >= 1)
+                    state = State.Idle;
 
                 break;
         }
     }
 
-    private void SetRotation(float _t)
+    //private void SetDestinationZRotation()
+    //{
+    //    if (transform.rotation == startRotation)
+    //        destinationZRotation = finalRotation.eulerAngles.z;
+    //    if (transform.rotation == finalRotation)
+    //        destinationZRotation = startRotation.eulerAngles.z;
+    //}
+
+    private void SetRotation()
     {
-        var currentZRotation = transform.rotation.z;
-        var newZRotation = Mathf.Lerp(currentZRotation, destinationRotation.z, _t);
-        //transform.Rotate();
+        var newZRotation = Mathf.Lerp(startRotation.eulerAngles.z, finalRotation.eulerAngles.z, rotationLerpT);
+
+        print(newZRotation);
+
+        transform.Rotate(new Vector3(0.0f, 0.0f, newZRotation));
+        rotationLerpT += Time.deltaTime ;
     }
 
     #endregion
