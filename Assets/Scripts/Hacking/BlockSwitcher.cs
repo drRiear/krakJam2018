@@ -15,11 +15,6 @@ public class BlockSwitcher : MonoBehaviour {
     void Start () {
         InvokeRepeating("ChangeCollision", delay, interval);
     }
-	
-	
-	void Update () {
-        
-    }
 
     void ChangeCollision() {
         int previousIndex;
@@ -28,11 +23,11 @@ public class BlockSwitcher : MonoBehaviour {
         } else
             previousIndex = actualIndex - 1;
 
-        list[actualIndex].GetComponent<SpriteRenderer>().enabled = false;
-        list[actualIndex].GetComponent<Collider2D>().enabled = false;
+        list[actualIndex].SetActive(false);
+        list[actualIndex].SetActive(false);
 
-        list[previousIndex].GetComponent<SpriteRenderer>().enabled = true;
-        list[previousIndex].GetComponent<Collider2D>().enabled = true;
+        list[previousIndex].SetActive(true);
+        list[previousIndex].SetActive(true);
 
         if(actualIndex == list.Count-1)
             actualIndex = 0;
