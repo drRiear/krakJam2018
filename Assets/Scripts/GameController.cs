@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
+    public static bool isDetected = false;
+
 	void Start () {
 	 
 	}
 
 	void Update () {
-		
-	}
+
+    }
 }
