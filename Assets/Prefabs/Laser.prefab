@@ -80,6 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 1
   speed: 50
+  wallLayerName: Walls
+  enemyLayerName: Enemies
   damage: 0
 --- !u!212 &212138145792563134
 SpriteRenderer:
