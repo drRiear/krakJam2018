@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     
-
     #region Inspector Variables
     [SerializeField]
     private float lifeTime;
@@ -38,7 +37,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
             Destroy(gameObject);
     }
 }
