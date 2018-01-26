@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ResetPositionToStartAfterTouch : MonoBehaviour {
 
+    #region Variables
+    [SerializeField] private GameObject gameObjectPosition;
+    #endregion
+
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
-            coll.transform.position = new Vector3(0, 0);
+            coll.transform.position = gameObjectPosition.transform.position;
     }
 }
