@@ -463,6 +463,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114202179960540818, guid: effd3c148d24a464bb28afd9d333cbbc,
+        type: 2}
+      propertyPath: speedOfRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114202179960540818, guid: effd3c148d24a464bb28afd9d333cbbc,
+        type: 2}
+      propertyPath: angleOfRotation
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114202179960540818, guid: effd3c148d24a464bb28afd9d333cbbc,
+        type: 2}
+      propertyPath: inIdleTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: effd3c148d24a464bb28afd9d333cbbc, type: 2}
   m_IsPrefabParent: 0
