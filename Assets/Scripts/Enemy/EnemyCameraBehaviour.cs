@@ -19,7 +19,7 @@ public class EnemyCameraBehaviour : MonoBehaviour {
     private Quaternion startRotation;
     private Quaternion finalRotation;
 
-    private float destinationZRotation;
+    private Quaternion destinationRotation;
 
     private float rotationLerpT;
 
@@ -60,30 +60,34 @@ public class EnemyCameraBehaviour : MonoBehaviour {
                 SetRotation();
 
                 //print(rotationLerpT);
-
-                if (rotationLerpT >= 1)
-                    state = State.Idle;
+                
 
                 break;
         }
     }
 
-    //private void SetDestinationZRotation()
-    //{
-    //    if (transform.rotation == startRotation)
-    //        destinationZRotation = finalRotation.eulerAngles.z;
-    //    if (transform.rotation == finalRotation)
-    //        destinationZRotation = startRotation.eulerAngles.z;
-    //}
+    public float rotationDirection = 1;
+    private float rotationSpeed = 20;
+
+    private void SetDestinationZRotation()
+    {
+        if (transform.rotation == startRotation)
+            rotationDirection = 1;
+        if (transform.rotation == finalRotation)
+            rotationDirection = -1;
+    }
 
     private void SetRotation()
     {
-        var newZRotation = Mathf.Lerp(startRotation.eulerAngles.z, finalRotation.eulerAngles.z, rotationLerpT);
+        SetDestinationZRotation();
 
-        print(newZRotation);
+        var newRotation = Quaternion.RotateTowards(transform.rotation, finalRotation, Time.deltaTime * rotationDirection * rotationSpeed);
 
-        transform.Rotate(new Vector3(0.0f, 0.0f, newZRotation));
-        rotationLerpT += Time.deltaTime ;
+        print(newRotation);
+
+        transform.rotation = newRotation;
+
+        rotationLerpT += Time.deltaTime;
     }
 
     #endregion
