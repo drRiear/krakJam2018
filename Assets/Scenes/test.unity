@@ -449,6 +449,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114394074039535282, guid: 6ac843d3171266948adb5c8d8bcde777,
+        type: 2}
+      propertyPath: projectilePrefub
+      value: 
+      objectReference: {fileID: 1664294558833288, guid: 0940bb7b6a624ec4cb7b86a649ed14ca,
+        type: 2}
+    - target: {fileID: 114394074039535282, guid: 6ac843d3171266948adb5c8d8bcde777,
+        type: 2}
+      propertyPath: isSooted
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ac843d3171266948adb5c8d8bcde777, type: 2}
   m_IsPrefabParent: 0
