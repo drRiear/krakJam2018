@@ -16,12 +16,17 @@ public class ElevatorButtonScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (GameController.isHacked == true)
         {
-            openElevatorSound.Play();
-            Invoke("OpenElevator", 1.5f);
-            
-        }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                openElevatorSound.Play();
+                Invoke("OpenElevator", 1.5f);
+                GameController.isHacked = false;
+            }
+        }else
+            print("Nimo danych");
+        
     }
 
     void OpenElevator()
