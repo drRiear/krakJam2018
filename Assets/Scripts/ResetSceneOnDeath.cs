@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ResetSceneOnDeath : MonoBehaviour {
 
-    
+    [SerializeField] private AudioSource audio;
 
-    
+
 
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -17,6 +17,7 @@ public class ResetSceneOnDeath : MonoBehaviour {
 
 
             Invoke("Reset",0.3f);
+            PlaySource();
         }
             
     }
@@ -24,6 +25,10 @@ public class ResetSceneOnDeath : MonoBehaviour {
     void Reset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    void PlaySource()
+    {
+        audio.Play();
     }
 
 }
