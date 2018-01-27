@@ -4,18 +4,21 @@ using System.Collections;
 public class TurretBehaviour : MonoBehaviour
 {
     #region Inspector Vars
-
     [SerializeField] private float rotationSpeed = 10;
     [SerializeField] private float angleStep = 60;
-    [SerializeField] private float delay = 2;
-
+    [SerializeField] private float rotateDelay = 2;
+    [SerializeField] private float shootDelay = 0.5f;
+    [SerializeField] private GameObject projectilePrefub;
     #endregion
+
+    [HideInInspector]public State state;
 
     #region Private Vars
 
     private float timer;
-    private  State state;
+    private Transform playerTransform;
     private Quaternion quaternionStep;
+    public bool isSooted;  
 
     #endregion
 
@@ -23,8 +26,9 @@ public class TurretBehaviour : MonoBehaviour
 
     void Start()
     {
+        playerTransform = CharacterManager.Instance.player.transform;
         quaternionStep.eulerAngles = new Vector3(0.0f, 0.0f, transform.eulerAngles.z + angleStep);
-        timer = delay;
+        timer = rotateDelay;
     }
     
     void Update()
@@ -40,19 +44,39 @@ public class TurretBehaviour : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionStep,
             Time.deltaTime * rotationSpeed);
     }
+
+
     private void SetState()
     {
         switch (state)
         {
             case State.Idle:
                 Idle();
-
                 break;
             case State.Rotating:
                 Rotating();
+                break;
+            case State.LockOnPlayer:
+                Lock();
+
+                if (!isSooted)
+                {
+                    isSooted = true;
+                    Instantiate(projectilePrefub, transform.position, Quaternion.identity);
+                }
 
                 break;
         }
+    }
+
+    private void Lock()
+    {
+        var difference = transform.position - playerTransform.position;
+        difference.Normalize();
+        difference.z = 0.0f;
+
+        float rot_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
 
     private void Idle()
@@ -67,7 +91,7 @@ public class TurretBehaviour : MonoBehaviour
 
     private void Rotating()
     {
-        timer = delay;
+        timer = rotateDelay;
 
         Rotate();
 
@@ -77,6 +101,6 @@ public class TurretBehaviour : MonoBehaviour
 
     #endregion
 
-    public enum State { Idle, Rotating };
+    public enum State { Idle, Rotating, LockOnPlayer, Alarm }
     
 }

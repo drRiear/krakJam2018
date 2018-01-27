@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ResetSceneOnClick : MonoBehaviour {
 
-	
+    
 	void Update () {
         if (Input.GetKey(KeyCode.Space))
         {
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

@@ -5,14 +5,12 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
     
     #region Inspector Variables
-    [SerializeField]
-    private float lifeTime;
+    [SerializeField] private float lifeTime;
     [SerializeField] private float speed;
     #endregion
 
     #region Private variables
     private Vector3 difference;
-    [HideInInspector] public float damage;
     #endregion
 
     private void Start()
@@ -40,10 +38,8 @@ public class Projectile : MonoBehaviour {
         if (collision.gameObject.layer == CharacterManager.Instance.wallsLayer)
             Destroy(gameObject);
 
-        var deathComponent = collision.GetComponent<Death>();
-
-        if (deathComponent == null) return;
-
+        var deathComponent = collision.GetComponent<PlayerDeath>();
+        
         deathComponent.Die();
         
     }

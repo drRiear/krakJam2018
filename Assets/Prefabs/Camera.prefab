@@ -39,9 +39,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4440589328052408}
   - component: {fileID: 60435559746931476}
-  - component: {fileID: 114798860626710112}
   - component: {fileID: 120436520372540492}
-  - component: {fileID: 114753876758857932}
+  - component: {fileID: 114440209602807470}
   m_Layer: 0
   m_Name: Vision
   m_TagString: Untagged
@@ -87,7 +86,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -153,7 +152,11 @@ MonoBehaviour:
   angleOfRotation: 45
   rotationSpeed: 20
   inIdleTime: 3
---- !u!114 &114753876758857932
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
+  destinationRotation: {x: 0, y: 0, z: 0, w: 0}
+  state: 0
+  playerTransform: {fileID: 0}
+--- !u!114 &114440209602807470
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,18 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceleMultiplier: 2
   alarmTime: 2
---- !u!114 &114798860626710112
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649555355787758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d47eddf793bb340bdd934caaeec5bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target1: {fileID: 0}
 --- !u!120 &120436520372540492
 LineRenderer:
   m_ObjectHideFlags: 1
