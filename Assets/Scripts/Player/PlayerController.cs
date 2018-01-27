@@ -26,18 +26,6 @@ public class PlayerController : MonoBehaviour
         SetMovementRotation();
     }
 
-    private void SetMovementRotation()
-    {
-        if (movementDirection.x > 0)
-            transform.localEulerAngles = Vector3.zero;
-        if (movementDirection.x < 0)
-            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 180.0f);
-        if (movementDirection.y > 0)
-            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 90.0f);
-        if (movementDirection.y < 0)
-            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 270.0f);
-    }
-
     #endregion
 
     #region Private Methods
@@ -53,8 +41,20 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(force);
     }
 
-    #endregion  
+    private void SetMovementRotation()
+    {
+        if (movementDirection.x > 0)
+            transform.localEulerAngles = Vector3.zero;
+        if (movementDirection.x < 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 180.0f);
+        if (movementDirection.y > 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 90.0f);
+        if (movementDirection.y < 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 270.0f);
+    }
+
+    #endregion
 
 
-    
+
 }

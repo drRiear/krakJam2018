@@ -7,10 +7,20 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootDelay;
     [SerializeField] private float amo;
+    [SerializeField] private float shootNoiseRadius;
 
     private AudioSource shootAudioSource;
     private float attackTimer;
-    [SerializeField] private Weapons weapon;
+    private Weapons weapon;
+    private bool canHit;
+
+    #region Unity Events
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.grey;
+        Gizmos.DrawWireSphere(transform.position, shootNoiseRadius);    
+    }
 
     void Start()
     {
@@ -25,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
         switch (weapon)
         {
             case Weapons.Melee:
-
+                canHit = Input.GetMouseButton(0);
                 break;
             case Weapons.Range:
                 Shoot();
@@ -33,6 +43,15 @@ public class PlayerAttack : MonoBehaviour
         }
         
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!canHit) return;
+        Destroy(collision.gameObject);
+    }
+    #endregion
+
+    #region Private Methods
 
     private void Shoot()
     {
@@ -52,6 +71,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
             weapon = Weapons.Range;
     }
+
+    #endregion
 
     enum Weapons { Melee, Range }
 }
