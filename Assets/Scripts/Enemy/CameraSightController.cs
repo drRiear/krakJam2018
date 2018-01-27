@@ -18,7 +18,6 @@ public class CameraSightController : MonoBehaviour
 
     void Update()
     {
-        print(target1.position + " " + gameObject.name);
         if (GameController.isDetectedByCamera == true)
         {
             RaiseAlarm();

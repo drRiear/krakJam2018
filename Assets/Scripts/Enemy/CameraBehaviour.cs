@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCameraBehaviour : MonoBehaviour {
+public class CameraBehaviour : MonoBehaviour {
 
     #region Inspector Vars
     [Header("Rotation")]
