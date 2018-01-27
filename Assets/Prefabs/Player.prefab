@@ -267,8 +267,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1199775936176872, guid: 863ca3b72f8997d468925c02d8898b63,
     type: 2}
+<<<<<<< Updated upstream
   shootDelay: 1
   amo: 10
+=======
+  shootDelay: 0
+  amo: 0
+>>>>>>> Stashed changes
   shootNoiseRadius: 0
 --- !u!212 &212315488232752278
 SpriteRenderer:
