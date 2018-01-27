@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        CharacterManager.Instance.player = gameObject;
     }
     private void Update()
     {
