@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootDelay;
     [SerializeField] private int ammo;
+    [SerializeField] private int empAmmo;
+    [SerializeField] private float empRange;
     [SerializeField] private float shootNoiseRadius;
 
     private AudioSource shootAudioSource;
@@ -37,7 +39,8 @@ public class PlayerAttack : MonoBehaviour
             Hit();
         if (weapon == Weapons.Range)
             Shoot();
-        
+        if (weapon == Weapons.Emp)
+            Emp();
         CollectAmo();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +75,8 @@ public class PlayerAttack : MonoBehaviour
             weapon = Weapons.Melee;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             weapon = Weapons.Range;
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            weapon = Weapons.Emp;
     }
     private void CollectAmo()
     {
@@ -92,7 +97,12 @@ public class PlayerAttack : MonoBehaviour
             currentDeathComponent.Die();
     }
 
+    private void Emp()
+    {
+        if (empAmmo == 0) return;
+    }
+
     #endregion
 
-    enum Weapons { Melee, Range }
+    enum Weapons { Melee, Range, Emp }
 }
