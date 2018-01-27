@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58646279120181342}
   - component: {fileID: 50075991508719014}
   - component: {fileID: 114528943031994810}
+  - component: {fileID: 114852728405676566}
   m_Layer: 0
   m_Name: PlayerHacking
   m_TagString: Player
@@ -90,6 +91,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114852728405676566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433906140365088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf558aaec0dc2654eb88e59bd0562341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212991999087166478
 SpriteRenderer:
   m_ObjectHideFlags: 1
