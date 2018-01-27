@@ -6,7 +6,7 @@ public class EnemyPatrolBehaviour : MonoBehaviour
 {
 
     #region Inspector Variables
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private int distance;
     [SerializeField] private bool isOX;
     [SerializeField] private float distanceOfView;
@@ -62,9 +62,15 @@ public class EnemyPatrolBehaviour : MonoBehaviour
     private void LookForPlayer()
     {
         var hits = Physics2D.RaycastAll(transform.position, directionOfView * distanceOfView);
-        bool bo;
         foreach (var hit in hits)
+        {
             if (hit.collider.gameObject == CharacterManager.Instance.player)
-                 bo = true;
+            {
+                GameController.isDetectedByEnemy = true;
+                break;
+            }
+            
+            GameController.isDetectedByEnemy = false;
+        }
     }
 }

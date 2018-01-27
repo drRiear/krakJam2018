@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySightController : MonoBehaviour
+public class CameraAlarmTrigger : MonoBehaviour
 {
     #region Inspector Vars
 
-    [SerializeField] private float speedMultiplier = 1;
+    [SerializeField] private float sceleMultiplier;
     [SerializeField] private float alarmTime;
 
     #endregion
@@ -16,21 +16,32 @@ public class EnemySightController : MonoBehaviour
     private bool isInAlarm;
     private float alarmTimer;
 
-    private EnemyPatrolBehaviour patrolBeh;
     #endregion
 
     #region Unity Events
     private void Awake()
     {
-        patrolBeh = GetComponent<EnemyPatrolBehaviour>();
         alarmTimer = alarmTime;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject != CharacterManager.Instance.player) return;
+
+        GameController.isDetectedByCamera = true;
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject != CharacterManager.Instance.player) return;
+
+        StartTimer();
     }
     void Update()
     {
-        if (GameController.isDetectedByEnemy && !isInAlarm)
+        if (GameController.isDetectedByCamera && !isInAlarm)
             RaiseAlarm();
+        
 
-        if (!GameController.isDetectedByEnemy)
+        if (!GameController.isDetectedByCamera)
             ReleaseAlarm();
     }
     #endregion
@@ -41,7 +52,7 @@ public class EnemySightController : MonoBehaviour
     {
         alarmTimer = alarmTime;
         isInAlarm = true;
-        patrolBeh.speed *= speedMultiplier;
+        transform.localScale *= sceleMultiplier;
     }
 
     private void ReleaseAlarm()
@@ -51,8 +62,14 @@ public class EnemySightController : MonoBehaviour
         else if (isInAlarm)
         {
             isInAlarm = false;
-            patrolBeh.speed /= speedMultiplier;
+            transform.localScale /= sceleMultiplier;
         }
+    }
+
+    private void StartTimer()
+    {
+        GameController.isDetectedByCamera = false;
+        
     }
     #endregion
 }
