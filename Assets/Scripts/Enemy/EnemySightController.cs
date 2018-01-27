@@ -8,12 +8,12 @@ public class EnemySightController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameController.isDetected = true;
+        GameController.isDetectedByEnemy = true;
     }
 
     void Update()
     {
-        if (GameController.isDetected == true)
+        if (GameController.isDetectedByEnemy == true)
          Attack();
         
     }
