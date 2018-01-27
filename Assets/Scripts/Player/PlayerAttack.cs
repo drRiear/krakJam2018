@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
 
     private AudioSource shootAudioSource;
     private AudioSource empAudioSource;
+    private AudioSource meleeAudioSource;
     private float attackTimer;
     private Weapons weapon;
 
@@ -34,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
     {
         shootAudioSource = GetComponent<AudioSource>();
         empAudioSource = GetComponent<AudioSource>();
+        meleeAudioSource = GetComponent<AudioSource>();
         attackTimer = shootDelay;
     }
 
@@ -100,6 +102,7 @@ public class PlayerAttack : MonoBehaviour
         if (currentDeathComponent == null) return;
 
         if (Input.GetMouseButton(0))
+            meleeAudioSource.Play();
             currentDeathComponent.Die();
     }
 
