@@ -13,11 +13,13 @@ public class CameraAlarmTrigger : MonoBehaviour
 
     #region Private Vars
 
-    private bool isInAlarm;
+    private bool isBig;
     private float alarmTimer;
 
     private PolygonCollider2D polygonCollider;
     private LineRenderer vision;
+
+    private CameraBehaviour behaviourComponent; 
     #endregion
 
     #region Unity Events
@@ -25,7 +27,7 @@ public class CameraAlarmTrigger : MonoBehaviour
     {
         alarmTimer = alarmTime;
 
-
+        behaviourComponent = GetComponentInParent<CameraBehaviour>();
         polygonCollider = GetComponent<PolygonCollider2D>();
         vision = GetComponent<LineRenderer>();
 
@@ -48,10 +50,9 @@ public class CameraAlarmTrigger : MonoBehaviour
     }
     void Update()
     {
-        if (GameController.isDetectedByCamera && !isInAlarm)
+        if (GameController.isDetectedByCamera)
             RaiseAlarm();
-
-
+        
         if (!GameController.isDetectedByCamera)
             ReleaseAlarm();
     }
@@ -61,24 +62,29 @@ public class CameraAlarmTrigger : MonoBehaviour
 
     private void RaiseAlarm()
     {
+        if (!isBig)
+            transform.localScale *= sceleMultiplier;
+
+        behaviourComponent.state = CameraBehaviour.State.LockOnPlayer;
         alarmTimer = alarmTime;
-        isInAlarm = true;
-        transform.localScale *= sceleMultiplier;
+        isBig = true;
     }
 
     private void ReleaseAlarm()
     {
         if (alarmTimer > 0)
             alarmTimer -= Time.deltaTime;
-        else if (isInAlarm)
+        else if (isBig)
         {
-            isInAlarm = false;
+            isBig = false;
             transform.localScale /= sceleMultiplier;
+            behaviourComponent.state = CameraBehaviour.State.Rotating;
         }
     }
 
     private void StartTimer()
     {
+        behaviourComponent.state = CameraBehaviour.State.Alarm;
         GameController.isDetectedByCamera = false;
 
     }

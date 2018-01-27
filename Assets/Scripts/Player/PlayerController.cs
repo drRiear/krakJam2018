@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 movementDirection;
 
     #region Unity events
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         CharacterManager.Instance.player = gameObject;

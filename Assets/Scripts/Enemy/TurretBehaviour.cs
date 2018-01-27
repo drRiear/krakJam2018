@@ -5,9 +5,9 @@ public class TurretBehaviour : MonoBehaviour
 {
     #region Inspector Vars
 
-    private float rotationSpeed = 10;
-    private float angleStep = 60;
-    private float delay = 2;
+    [SerializeField] private float rotationSpeed = 10;
+    [SerializeField] private float angleStep = 60;
+    [SerializeField] private float delay = 2;
 
     #endregion
 

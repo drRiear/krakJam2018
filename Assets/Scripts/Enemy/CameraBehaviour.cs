@@ -11,28 +11,27 @@ public class CameraBehaviour : MonoBehaviour {
     [Header("Idle")]
     [SerializeField] private float inIdleTime;
     #endregion
-    [HideInInspector] public static Quaternion startRotation;
-    [HideInInspector] public static Quaternion destinationRotation;
+
+    [HideInInspector] public Quaternion startRotation;
+    [HideInInspector] public Quaternion destinationRotation;
+    //[HideInInspector]
+    public State state = 0;
+    [HideInInspector] public Transform playerTransform;
+
     #region Private Vars
-    private State state = 0;
-
-    
     private Quaternion finalRotation;
-
-
     private float rotationDirection = 1;
-
     private float inIdleTimer;
     #endregion
 
     #region Unity Events
     void Start ()
     {
+        playerTransform = CharacterManager.Instance.player.transform;
         inIdleTimer = inIdleTime;
         startRotation = transform.rotation;
         finalRotation.eulerAngles = new Vector3(0.0f, 0.0f, transform.rotation.eulerAngles.z + angleOfRotation);
         
-
     }
 	void Update ()
 	{
@@ -58,7 +57,21 @@ public class CameraBehaviour : MonoBehaviour {
                 SetRotation();
 
                 break;
+
+            case State.LockOnPlayer:
+                Lock();
+                break;
         }
+    }
+
+    private void Lock()
+    {
+        var difference = transform.position - playerTransform.position;
+        difference.Normalize();
+        difference.z = 0.0f;
+
+        float rot_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
 
     private void SetRotation()
@@ -85,5 +98,5 @@ public class CameraBehaviour : MonoBehaviour {
     }
     #endregion
 
-    private enum State { Idle, Rotating };
+    public enum State { Idle, Rotating, LockOnPlayer, Alarm };
 }
