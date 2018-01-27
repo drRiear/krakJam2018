@@ -269,7 +269,6 @@ MonoBehaviour:
     type: 2}
   shootDelay: 0
   amo: 0
->>>>>>> Stashed changes
   shootNoiseRadius: 0
 --- !u!212 &212315488232752278
 SpriteRenderer:
