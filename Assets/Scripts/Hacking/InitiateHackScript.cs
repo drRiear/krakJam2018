@@ -17,7 +17,6 @@ public class InitiateHackScript : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            print("HAKUJ DZIDO");
             initiateHackSound.Play();
             Invoke("InitiateHack", 0.2f);
         }
