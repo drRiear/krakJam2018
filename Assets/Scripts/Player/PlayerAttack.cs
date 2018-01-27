@@ -112,8 +112,9 @@ public class PlayerAttack : MonoBehaviour
         {
             empAmmo--;
             attackTimer = shootDelay;
-            Physics2D.OverlapCircle(transform.position, empRange, CharacterManager.androidEnemyLayer);
+            Physics2D.OverlapCircle(transform.position, empRange //CharacterManager.androidEnemyLayer);
             // JEBNIJ EMP W ROBUTA
+            );
             empAudioSource.Play();
         }
     }
