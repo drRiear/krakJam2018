@@ -8,9 +8,6 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private float lifeTime;
     [SerializeField] private float speed;
-    [Header("Layer names")]
-    [SerializeField] private string wallLayerName;
-    [SerializeField] private string enemyLayerName;
     #endregion
 
     #region Private variables
@@ -40,10 +37,10 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer(wallLayerName))
+        if (collision.gameObject.layer == CharacterManager.Instance.wallsLayer)
             Destroy(gameObject);
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer(enemyLayerName))
+        if (collision.gameObject.layer == CharacterManager.Instance.enemiesLayer)
         {
             Destroy(collision.gameObject); 
             Destroy(gameObject);
