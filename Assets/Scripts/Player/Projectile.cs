@@ -40,11 +40,11 @@ public class Projectile : MonoBehaviour {
         if (collision.gameObject.layer == CharacterManager.Instance.wallsLayer)
             Destroy(gameObject);
 
-        if (collision.gameObject.layer == CharacterManager.Instance.enemiesLayer)
-        {
-            Destroy(collision.gameObject); 
-            Destroy(gameObject);
-        }
+        var deathComponent = collision.GetComponent<Death>();
+
+        if (deathComponent == null) return;
+
+        deathComponent.isDead = true;
         
     }
 }
