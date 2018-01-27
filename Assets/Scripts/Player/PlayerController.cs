@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     private Rigidbody2D rb;
+    private Vector3 movementDirection;
 
     #region Unity events
     private void Start()
@@ -21,21 +22,39 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Movement();
+
+        SetMovementRotation();
     }
+
+    private void SetMovementRotation()
+    {
+        if (movementDirection.x > 0)
+            transform.localEulerAngles = Vector3.zero;
+        if (movementDirection.x < 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 180.0f);
+        if (movementDirection.y > 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 90.0f);
+        if (movementDirection.y < 0)
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, 270.0f);
+    }
+
     #endregion
 
     #region Private Methods
 
     private void Movement()
     {
-        var direction = new Vector3 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movementDirection = new Vector3 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (direction == Vector3.zero) return;
+        if (movementDirection == Vector3.zero) return;
 
-        var force = direction * speed * Time.deltaTime;
+        var force = movementDirection * speed * Time.deltaTime;
 
         rb.AddForce(force);
     }
 
     #endregion  
+
+
+    
 }
