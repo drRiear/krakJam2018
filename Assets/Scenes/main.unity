@@ -306,11 +306,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114857592127632864, guid: f47100a6caf262f498f5c18d89f0b76e,
-        type: 2}
-      propertyPath: shootDelay
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f47100a6caf262f498f5c18d89f0b76e, type: 2}
   m_IsPrefabParent: 0
@@ -782,41 +777,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1556493192 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1814256110200872, guid: f47100a6caf262f498f5c18d89f0b76e,
-    type: 2}
-  m_PrefabInternal: {fileID: 468346685}
 --- !u!4 &1556493194 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4466796555154934, guid: f47100a6caf262f498f5c18d89f0b76e,
     type: 2}
   m_PrefabInternal: {fileID: 468346685}
---- !u!61 &1556493201
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1556493192}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.75, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1641290584
 Prefab:
   m_ObjectHideFlags: 0
@@ -898,6 +863,12 @@ MonoBehaviour:
   camerasList: []
   enemiesList: []
   player: {fileID: 0}
+  enemiesLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  wallsLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1926971487
 Transform:
   m_ObjectHideFlags: 0
