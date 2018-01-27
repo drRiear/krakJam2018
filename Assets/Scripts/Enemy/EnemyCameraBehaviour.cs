@@ -31,8 +31,8 @@ public class EnemyCameraBehaviour : MonoBehaviour {
         inIdleTimer = inIdleTime;
         startRotation = transform.rotation;
         finalRotation.eulerAngles = new Vector3(0.0f, 0.0f, transform.rotation.eulerAngles.z + angleOfRotation);
+        
 
-        CharacterManager.Instance.camerasList.Add(gameObject);
     }
 	void Update ()
 	{

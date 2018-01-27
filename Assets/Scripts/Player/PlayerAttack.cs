@@ -91,7 +91,6 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetMouseButton(0))
             currentDeathComponent.isDead = true;
-
     }
 
     #endregion
