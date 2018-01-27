@@ -17,15 +17,8 @@ public class Death : MonoBehaviour
 
     private void TurnOffMovement()
     {
-        switch (type)
-        {
-            case EnemyType.Patrol:
+        if ( type == EnemyType.Patrol)
                 GetComponent<EnemyPatrolBehaviour>().enabled = false;
-                break;
-            case EnemyType.Turret:
-
-                break;
-        }
     }
 
     public void Die()
