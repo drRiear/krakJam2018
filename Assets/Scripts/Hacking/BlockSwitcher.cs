@@ -22,11 +22,9 @@ public class BlockSwitcher : MonoBehaviour {
             previousIndex = list.Count-1;
         } else
             previousIndex = actualIndex - 1;
-
+        
         list[actualIndex].SetActive(false);
-        list[actualIndex].SetActive(false);
-
-        list[previousIndex].SetActive(true);
+        
         list[previousIndex].SetActive(true);
 
         if(actualIndex == list.Count-1)
