@@ -955,7 +955,7 @@ Prefab:
     - target: {fileID: 212142784560161172, guid: 80080bff68f698f49a35e1c1943daf97,
         type: 2}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4318179800008418, guid: 80080bff68f698f49a35e1c1943daf97, type: 2}
       propertyPath: m_LocalScale.x

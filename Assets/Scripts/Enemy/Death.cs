@@ -6,9 +6,8 @@ public class Death : MonoBehaviour
 {
 
     public bool isDead;
-
     public int amunition;
-
+    
     private void Update()
     {
         if (isDead && amunition == 0)
@@ -17,4 +16,6 @@ public class Death : MonoBehaviour
         if (isDead)
             GetComponent<EnemyPatrolBehaviour>().enabled = false;
     }
+
+    public enum Enemy { Camera, Human, Turret, Android}
 }

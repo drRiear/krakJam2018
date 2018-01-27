@@ -5,9 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     #region Inspector Vars
     [SerializeField] private float speed;
-
-    [Header("Layers names")]
-    [SerializeField] private string wallLayerMask;
+    
     #endregion
 
     private Rigidbody2D rb;
