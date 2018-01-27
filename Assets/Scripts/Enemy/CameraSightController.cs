@@ -15,11 +15,9 @@ public class CameraSightController : MonoBehaviour
     {
         if (GameController.isDetectedByCamera == true)
             RaiseAlarm();
-
     }
 
     void RaiseAlarm()
     {
-
     }
 }
