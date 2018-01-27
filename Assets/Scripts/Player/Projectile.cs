@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour {
 
         if (deathComponent == null) return;
 
-        deathComponent.isDead = true;
+        deathComponent.Die();
         
     }
 }
