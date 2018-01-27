@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetPositionToStartAfterTouch : MonoBehaviour {
+public class ChangePosition : MonoBehaviour {
 
     #region Variables
-    [SerializeField] private GameObject gameObjectPosition;
+    public Transform gameObjectTransform;
     #endregion
 
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
-            coll.transform.position = gameObjectPosition.transform.position;
+            coll.transform.position = gameObjectTransform.transform.position;
     }
 }
