@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 58003701768263552}
   - component: {fileID: 50588399805492058}
   - component: {fileID: 114426143092344418}
+  - component: {fileID: 61549648748495558}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -104,12 +105,37 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!61 &61549648748495558
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814256110200872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.75, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!61 &61816503917702178
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -242,7 +268,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1199775936176872, guid: 863ca3b72f8997d468925c02d8898b63,
     type: 2}
   shootDelay: 1
-  amo: 0
+  amo: 10
   shootNoiseRadius: 0
 --- !u!212 &212315488232752278
 SpriteRenderer:
