@@ -32,14 +32,14 @@ public class CameraAlarmTrigger : MonoBehaviour
         vision.positionCount = polygonCollider.points.Length;
         for (int i = 0; i < polygonCollider.points.Length; i++)
             vision.SetPosition(i, new Vector3(polygonCollider.points[i].x, polygonCollider.points[i].y, 0.0f));
-        
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
 
         GameController.isDetectedByCamera = true;
-    }   
+    }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
@@ -50,7 +50,7 @@ public class CameraAlarmTrigger : MonoBehaviour
     {
         if (GameController.isDetectedByCamera && !isInAlarm)
             RaiseAlarm();
-        
+
 
         if (!GameController.isDetectedByCamera)
             ReleaseAlarm();
@@ -80,7 +80,7 @@ public class CameraAlarmTrigger : MonoBehaviour
     private void StartTimer()
     {
         GameController.isDetectedByCamera = false;
-        
+
     }
     #endregion
 }

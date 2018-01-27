@@ -51,6 +51,7 @@ public class EnemyPatrolBehaviour : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(180, 0, 0);
             direction = -1;
+            Debug.Log("TURN");
         }
         else if (Vector3Int.RoundToInt(transform.position) == Vector3Int.RoundToInt(startPos))
         {
