@@ -7,6 +7,7 @@ public class ChangePosition : MonoBehaviour {
     #region Variables
     public Transform gameObjectTransform;
     private Rigidbody2D rigidbody;
+    [SerializeField] private AudioSource audio;
     #endregion
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -19,6 +20,7 @@ public class ChangePosition : MonoBehaviour {
             coll.transform.position = gameObjectTransform.transform.position;
             rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
             Invoke("SetFree", 0.5f);
+            PlaySource();
 
         }
             
@@ -28,5 +30,9 @@ public class ChangePosition : MonoBehaviour {
     {
         rigidbody.constraints = RigidbodyConstraints2D.None;
     }
-    
+    void PlaySource()
+    {
+        audio.Play();
+    }
+
 }
