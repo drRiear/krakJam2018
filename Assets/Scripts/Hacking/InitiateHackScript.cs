@@ -19,7 +19,7 @@ public class InitiateHackScript : MonoBehaviour {
         {
             print("HAKUJ DZIDO");
             initiateHackSound.Play();
-            Invoke("InitiateHack", 0.3f);
+            Invoke("InitiateHack", 0.2f);
         }
     }
 
