@@ -16,9 +16,9 @@ public class CameraBehaviour : MonoBehaviour {
     [HideInInspector] public Quaternion destinationRotation;
     //[HideInInspector]
     public State state = 0;
-    [HideInInspector] public Transform playerTransform;
 
     #region Private Vars
+    private Transform playerTransform;
     private Quaternion finalRotation;
     private float rotationDirection = 1;
     private float inIdleTimer;
@@ -98,5 +98,5 @@ public class CameraBehaviour : MonoBehaviour {
     }
     #endregion
 
-    public enum State { Idle, Rotating, LockOnPlayer, Alarm };
+    public enum State { Idle, Rotating, LockOnPlayer, Alarm }
 }

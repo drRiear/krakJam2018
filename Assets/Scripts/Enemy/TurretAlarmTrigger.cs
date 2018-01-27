@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraAlarmTrigger : MonoBehaviour
+public class TurretAlarmTrigger : MonoBehaviour
 {
     #region Inspector Vars
 
@@ -19,7 +19,7 @@ public class CameraAlarmTrigger : MonoBehaviour
     private PolygonCollider2D polygonCollider;
     private LineRenderer vision;
 
-    private CameraBehaviour behaviourComponent; 
+    private TurretBehaviour behaviourComponent;
     #endregion
 
     #region Unity Events
@@ -27,31 +27,29 @@ public class CameraAlarmTrigger : MonoBehaviour
     {
         alarmTimer = alarmTime;
 
-        behaviourComponent = GetComponentInParent<CameraBehaviour>();
+        behaviourComponent = GetComponentInParent<TurretBehaviour>();
         polygonCollider = GetComponent<PolygonCollider2D>();
         vision = GetComponent<LineRenderer>();
 
         SetLine();
     }
-
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
 
         GameController.isDetectedByCamera = true;
     }
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
 
         StartTimer();
     }
-    void Update()
+    private void Update()
     {
         if (GameController.isDetectedByCamera)
             RaiseAlarm();
-        
+
         if (!GameController.isDetectedByCamera)
             ReleaseAlarm();
     }
@@ -71,7 +69,7 @@ public class CameraAlarmTrigger : MonoBehaviour
         if (!isBig)
             transform.localScale *= sceleMultiplier;
 
-        behaviourComponent.state = CameraBehaviour.State.LockOnPlayer;
+        behaviourComponent.state = TurretBehaviour.State.LockOnPlayer;
         alarmTimer = alarmTime;
         isBig = true;
     }
@@ -84,13 +82,13 @@ public class CameraAlarmTrigger : MonoBehaviour
         {
             isBig = false;
             transform.localScale /= sceleMultiplier;
-            behaviourComponent.state = CameraBehaviour.State.Rotating;
+            behaviourComponent.state = TurretBehaviour.State.Rotating;
         }
     }
 
     private void StartTimer()
     {
-        behaviourComponent.state = CameraBehaviour.State.Alarm;
+        behaviourComponent.state = TurretBehaviour.State.Alarm;
         GameController.isDetectedByCamera = false;
 
     }

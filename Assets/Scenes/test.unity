@@ -156,11 +156,6 @@ Prefab:
       propertyPath: m_Name
       value: Camera (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114798860626710112, guid: c9f2c53f91139d446a283b10ee0bbf02,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
   m_IsPrefabParent: 0
@@ -294,6 +289,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114394074039535282, guid: 6ac843d3171266948adb5c8d8bcde777,
+        type: 2}
+      propertyPath: projectilePrefub
+      value: 
+      objectReference: {fileID: 1664294558833288, guid: 0940bb7b6a624ec4cb7b86a649ed14ca,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ac843d3171266948adb5c8d8bcde777, type: 2}
   m_IsPrefabParent: 0
@@ -392,8 +393,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2052302725 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1814256110200872, guid: 2eeabeba54c5d4047906b8b29d82610f,
+    type: 2}
+  m_PrefabInternal: {fileID: 405016949}
 --- !u!4 &2052302730 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4466796555154934, guid: 2eeabeba54c5d4047906b8b29d82610f,
     type: 2}
   m_PrefabInternal: {fileID: 405016949}
+--- !u!114 &2052302731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052302725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801511b7e7ce4477816f75541af3a76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
