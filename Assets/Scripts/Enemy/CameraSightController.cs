@@ -14,11 +14,11 @@ public class CameraSightController : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         GameController.isDetectedByCamera = false;
+        SeizeAlarm();
     }
 
     void Update()
     {
-        print(target1.position + " " + gameObject.name);
         if (GameController.isDetectedByCamera == true)
         {
             RaiseAlarm();
@@ -29,7 +29,7 @@ public class CameraSightController : MonoBehaviour
     void RaiseAlarm()
     {
             float distance = Vector2.Distance(target1.position, transform.position);
-            if (distance < 10) // <
+            if (distance < 8)
             {
                 Vector2 dir = transform.position - target1.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -41,6 +41,11 @@ public class CameraSightController : MonoBehaviour
                 transform.rotation = (Quaternion.Slerp(transform.rotation, qto2, 5f * Time.deltaTime));
             }
 
+    }
+
+    void SeizeAlarm()
+    {
+        EnemyCameraBehaviour.destinationRotation = EnemyCameraBehaviour.startRotation;
     }
 }
 

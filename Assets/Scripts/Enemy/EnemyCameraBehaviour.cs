@@ -11,14 +11,14 @@ public class EnemyCameraBehaviour : MonoBehaviour {
     [Header("Idle")]
     [SerializeField] private float inIdleTime;
     #endregion
-
+    [HideInInspector] public static Quaternion startRotation;
+    [HideInInspector] public static Quaternion destinationRotation;
     #region Private Vars
     private State state = 0;
 
-    private Quaternion startRotation;
+    
     private Quaternion finalRotation;
 
-    private Quaternion destinationRotation;
 
     private float rotationDirection = 1;
 
