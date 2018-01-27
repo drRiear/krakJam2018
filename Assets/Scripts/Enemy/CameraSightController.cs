@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraSightController : MonoBehaviour
 {
-    [SerializeField]private Transform target1 = default(Transform);
+    [SerializeField]private Transform target;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,7 +14,7 @@ public class CameraSightController : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         GameController.isDetectedByCamera = false;
-        SeizeAlarm();
+
     }
 
     void Update()
@@ -28,24 +28,19 @@ public class CameraSightController : MonoBehaviour
 
     void RaiseAlarm()
     {
-            float distance = Vector2.Distance(target1.position, transform.position);
+            float distance = Vector2.Distance(target.position, transform.position);
             if (distance < 8)
             {
-                Vector2 dir = transform.position - target1.position;
+                Vector2 dir = transform.position - target.position;
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 Quaternion qto = Quaternion.AngleAxis(angle, Vector3.forward);
                 Quaternion qto2 = Quaternion.Euler(qto.eulerAngles.x,
                                                     qto.eulerAngles.y,
                                                     qto.eulerAngles.z - 90);
 
-                transform.rotation = (Quaternion.Slerp(transform.rotation, qto2, 5f * Time.deltaTime));
+                transform.rotation = Quaternion.Slerp(transform.rotation, qto2, 5f * Time.deltaTime);
             }
 
-    }
-
-    void SeizeAlarm()
-    {
-        CameraBehaviour.destinationRotation = CameraBehaviour.startRotation;
     }
 }
 
