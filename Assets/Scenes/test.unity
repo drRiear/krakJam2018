@@ -113,6 +113,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &340243279
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.3852787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.4649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041606434562846, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150053091297568, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+      propertyPath: m_Name
+      value: Camera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798860626710112, guid: c9f2c53f91139d446a283b10ee0bbf02,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c9f2c53f91139d446a283b10ee0bbf02, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &405016949
 Prefab:
   m_ObjectHideFlags: 0
@@ -150,11 +201,60 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466796555154934, guid: 2eeabeba54c5d4047906b8b29d82610f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eeabeba54c5d4047906b8b29d82610f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &910670079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 910670081}
+  - component: {fileID: 910670080}
+  m_Layer: 0
+  m_Name: CharacterManaget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &910670080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910670079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929edf1c2dda16b4b87c837fb9eafb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camerasList: []
+  enemiesList: []
+  player: {fileID: 0}
+  enemiesLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  wallsLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!4 &910670081
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910670079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.891208, y: 1.9342794, z: 8.7265625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1115220716
 Prefab:
   m_ObjectHideFlags: 0
@@ -192,7 +292,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4906933808661964, guid: 6ac843d3171266948adb5c8d8bcde777, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ac843d3171266948adb5c8d8bcde777, type: 2}
@@ -211,7 +311,7 @@ GameObject:
   - component: {fileID: 1916479963}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
