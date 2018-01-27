@@ -45,7 +45,11 @@ public class CameraSightController : MonoBehaviour
 
     void SeizeAlarm()
     {
+<<<<<<< HEAD
         CameraBehaviour.destinationRotation = CameraBehaviour.startRotation;
+=======
+      CameraBehaviour.destinationRotation = CameraBehaviour.startRotation;
+>>>>>>> master
     }
 }
 
