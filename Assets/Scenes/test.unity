@@ -417,6 +417,9 @@ MonoBehaviour:
   wallsLayer:
     serializedVersion: 2
     m_Bits: 256
+  androidEnemyLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!4 &910670081
 Transform:
   m_ObjectHideFlags: 0
