@@ -6,13 +6,14 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootDelay;
-    [SerializeField] private float amo;
+    [SerializeField] private int amo;
     [SerializeField] private float shootNoiseRadius;
 
     private AudioSource shootAudioSource;
     private float attackTimer;
     private Weapons weapon;
-    private bool canHit;
+
+    private Death currentDeathComponent;
 
     #region Unity Events
 
@@ -32,22 +33,20 @@ public class PlayerAttack : MonoBehaviour
     {
         ChangeWeapon();
 
-        switch (weapon)
-        {
-            case Weapons.Melee:
-                canHit = Input.GetMouseButton(0);
-                break;
-            case Weapons.Range:
-                Shoot();
-                break;
-        }
+        if (weapon == Weapons.Melee)
+            Hit();
+        if (weapon == Weapons.Range)
+            Shoot();
         
+        CollectAmo();
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!canHit) return;
-        Destroy(collision.gameObject);
+        currentDeathComponent = collision.GetComponent<Death>();
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        currentDeathComponent = null;
     }
     #endregion
 
@@ -55,9 +54,12 @@ public class PlayerAttack : MonoBehaviour
 
     private void Shoot()
     {
+        if (amo == 0) return;
+
         attackTimer -= Time.deltaTime;
         if (Input.GetMouseButton(0) && attackTimer <= 0.0f)
         {
+            amo--;
             attackTimer = shootDelay;
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shootAudioSource.Play();
@@ -70,6 +72,26 @@ public class PlayerAttack : MonoBehaviour
             weapon = Weapons.Melee;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             weapon = Weapons.Range;
+    }
+    private void CollectAmo()
+    {
+        if (currentDeathComponent == null || !currentDeathComponent.isDead) return;
+
+        print("Collect amo");
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            amo += currentDeathComponent.amunition;
+            currentDeathComponent.amunition = 0;
+        }
+    }
+
+    private void Hit()
+    {
+        if (currentDeathComponent == null) return;
+
+        if (Input.GetMouseButton(0))
+            currentDeathComponent.isDead = true;
+
     }
 
     #endregion

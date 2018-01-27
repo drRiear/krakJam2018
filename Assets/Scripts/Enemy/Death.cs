@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour {
+public class Death : MonoBehaviour
+{
 
-	
+    public bool isDead;
 
-	void Start ()
-	{
-		
-	}
-	
-	void Update ()
-	{
-		
-	}
+    public int amunition;
+
+    private void Update()
+    {
+        if (isDead && amunition == 0)
+            Destroy(gameObject);
+
+        if (isDead)
+            GetComponent<EnemyPatrolBehaviour>().enabled = false;
+    }
 }

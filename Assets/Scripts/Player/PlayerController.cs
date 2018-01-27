@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
 
         SetMovementRotation();
     }
-
     #endregion
 
     #region Private Methods
