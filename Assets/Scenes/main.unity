@@ -377,6 +377,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114518658200297284, guid: effd3c148d24a464bb28afd9d333cbbc,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1556493194}
     - target: {fileID: 1162988965806798, guid: effd3c148d24a464bb28afd9d333cbbc, type: 2}
       propertyPath: m_Name
       value: Camera (1)

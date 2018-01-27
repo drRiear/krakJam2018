@@ -4,20 +4,43 @@ using UnityEngine;
 
 public class CameraSightController : MonoBehaviour
 {
-
+    public Transform target;
+    Vector3 dir;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         GameController.isDetectedByCamera = true;
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GameController.isDetectedByCamera = false;
+    }
+
     void Update()
     {
         if (GameController.isDetectedByCamera == true)
+        {
             RaiseAlarm();
+        }
+            
     }
 
     void RaiseAlarm()
     {
+            float distance = Vector2.Distance(target.position, transform.position);
+            if (distance < 10)
+            {
+                Vector2 dir = transform.position - target.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                Quaternion qto = Quaternion.AngleAxis(angle, Vector3.forward);
+                Quaternion qto2 = Quaternion.Euler(qto.eulerAngles.x,
+                                                    qto.eulerAngles.y,
+                                                    qto.eulerAngles.z - 90);
+
+                transform.rotation = (Quaternion.Slerp(transform.rotation, qto2, 5f * Time.deltaTime));
+            }
+
     }
 }
+

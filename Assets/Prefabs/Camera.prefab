@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 60762340081759900}
   - component: {fileID: 114518658200297284}
   - component: {fileID: 120699632574095862}
+  - component: {fileID: 114601360785015446}
   m_Layer: 0
   m_Name: Vision
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162988965806798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.51, y: 5.49, z: 0}
+  m_LocalPosition: {x: -4.98, y: 5.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4498265087652436}
@@ -177,8 +178,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d47eddf793bb340bdd934caaeec5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &114601360785015446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1447009489407920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec023879ff8edc48a6e23062de70b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   sceleMultiplier: 2
-  alarmTime: 3
+  alarmTime: 2
 --- !u!120 &120699632574095862
 LineRenderer:
   m_ObjectHideFlags: 1
