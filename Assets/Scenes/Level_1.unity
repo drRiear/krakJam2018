@@ -864,19 +864,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
---- !u!114 &87562480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 87562475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 0}
 --- !u!1 &89507814 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -900,19 +887,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
---- !u!114 &89507820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 89507814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 0}
 --- !u!1 &91669627
 GameObject:
   m_ObjectHideFlags: 0
@@ -12819,19 +12793,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
---- !u!114 &1529530541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529530536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 0}
 --- !u!1001 &1532466465
 Prefab:
   m_ObjectHideFlags: 0
@@ -15946,7 +15907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 0}
+  audio: {fileID: 1056406940}
 --- !u!61 &1874636968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16187,19 +16148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
---- !u!114 &1896014312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896014306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 0}
 --- !u!4 &1903109850 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4871686187716080, guid: 520eef46b38545a43a72b3df78371220,
