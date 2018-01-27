@@ -12,9 +12,7 @@ public class Death : MonoBehaviour
     {
         if (isDead && amunition == 0)
             Destroy(gameObject);
-
-        if (isDead)
-            TurnOffMovement();
+        
     }
 
     private void TurnOffMovement()
@@ -28,6 +26,12 @@ public class Death : MonoBehaviour
 
                 break;
         }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        TurnOffMovement();
     }
 
     public enum EnemyType { Patrol, Turret}

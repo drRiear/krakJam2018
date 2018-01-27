@@ -76,8 +76,7 @@ public class PlayerAttack : MonoBehaviour
     private void CollectAmo()
     {
         if (currentDeathComponent == null || !currentDeathComponent.isDead) return;
-
-        print("Collect amo");
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             amo += currentDeathComponent.amunition;
@@ -90,7 +89,7 @@ public class PlayerAttack : MonoBehaviour
         if (currentDeathComponent == null) return;
 
         if (Input.GetMouseButton(0))
-            currentDeathComponent.isDead = true;
+            currentDeathComponent.Die();
     }
 
     #endregion
