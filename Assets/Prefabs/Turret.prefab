@@ -160,7 +160,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 10
   angleStep: 60
-  delay: 2
+  rotateDelay: 2
+  shootDelay: 0.5
+  projectilePrefub: {fileID: 1664294558833288, guid: 0940bb7b6a624ec4cb7b86a649ed14ca,
+    type: 2}
+  state: 0
+  isSooted: 0
 --- !u!114 &114986456162625220
 MonoBehaviour:
   m_ObjectHideFlags: 1

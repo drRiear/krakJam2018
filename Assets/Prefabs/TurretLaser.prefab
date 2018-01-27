@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212180532184657120}
   - component: {fileID: 61582009205883928}
   - component: {fileID: 50670999081728796}
-  - component: {fileID: 114927735713025898}
+  - component: {fileID: 114854616365930462}
   m_Layer: 0
   m_Name: TurretLaser
   m_TagString: Untagged
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114927735713025898
+--- !u!114 &114854616365930462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

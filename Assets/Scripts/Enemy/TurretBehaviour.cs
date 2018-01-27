@@ -11,19 +11,18 @@ public class TurretBehaviour : MonoBehaviour
     [SerializeField] private GameObject projectilePrefub;
     #endregion
 
-    [HideInInspector]public State state;
+    public State state;
 
     #region Private Vars
 
     private float timer;
     private Transform playerTransform;
     private Quaternion quaternionStep;
-    public bool isSooted;  
+    public bool isSooted = true;
 
     #endregion
 
     #region Unity Event
-
     void Start()
     {
         playerTransform = CharacterManager.Instance.player.transform;
@@ -51,6 +50,7 @@ public class TurretBehaviour : MonoBehaviour
         switch (state)
         {
             case State.Idle:
+                
                 Idle();
                 break;
             case State.Rotating:
