@@ -5,22 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ResetSceneOnDeath : MonoBehaviour {
 
-    public SpriteRenderer spriteRenderer;
+    
 
-    void Start()
-    {
-        
-        spriteRenderer.enabled = false;
-    }
+    
 
 
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            spriteRenderer.enabled = true;
 
-            Invoke("Reset", 2);
+
+            Invoke("Reset",0.3f);
         }
             
     }
