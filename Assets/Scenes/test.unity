@@ -300,6 +300,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114552851684534912, guid: 2eeabeba54c5d4047906b8b29d82610f,
+        type: 2}
+      propertyPath: shootNoiseRadius
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552851684534912, guid: 2eeabeba54c5d4047906b8b29d82610f,
+        type: 2}
+      propertyPath: empRange
+      value: 3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552851684534912, guid: 2eeabeba54c5d4047906b8b29d82610f,
+        type: 2}
+      propertyPath: empAmmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552851684534912, guid: 2eeabeba54c5d4047906b8b29d82610f,
+        type: 2}
+      propertyPath: ammo
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eeabeba54c5d4047906b8b29d82610f, type: 2}
   m_IsPrefabParent: 0

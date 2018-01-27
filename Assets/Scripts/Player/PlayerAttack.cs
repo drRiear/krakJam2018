@@ -11,7 +11,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float empRange;
     [SerializeField] private float shootNoiseRadius;
 
+
     private AudioSource shootAudioSource;
+    private AudioSource empAudioSource;
     private float attackTimer;
     private Weapons weapon;
 
@@ -22,12 +24,16 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.grey;
-        Gizmos.DrawWireSphere(transform.position, shootNoiseRadius);    
+        Gizmos.DrawWireSphere(transform.position, shootNoiseRadius);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, empRange);    
     }
 
     void Start()
     {
         shootAudioSource = GetComponent<AudioSource>();
+        empAudioSource = GetComponent<AudioSource>();
         attackTimer = shootDelay;
     }
 
@@ -100,6 +106,16 @@ public class PlayerAttack : MonoBehaviour
     private void Emp()
     {
         if (empAmmo == 0) return;
+
+        attackTimer -= Time.deltaTime;
+        if (Input.GetMouseButton(0) && attackTimer <= 0.0f)
+        {
+            empAmmo--;
+            attackTimer = shootDelay;
+            Physics2D.OverlapCircle(transform.position, empRange, CharacterManager.androidEnemyLayer);
+            // JEBNIJ EMP W ROBUTA
+            empAudioSource.Play();
+        }
     }
 
     #endregion

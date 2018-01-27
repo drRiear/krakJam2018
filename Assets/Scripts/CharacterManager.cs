@@ -9,5 +9,6 @@ public class CharacterManager : Singleton<CharacterManager>
 
     public LayerMask enemiesLayer;
     public LayerMask wallsLayer;
+    public static LayerMask androidEnemyLayer;
     
 }
