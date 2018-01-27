@@ -5,6 +5,14 @@ using UnityEngine;
 public class CameraSightController : MonoBehaviour
 {
     [SerializeField]private Transform target1 = default(Transform);
+    AudioSource audioSource;
+
+    void Start()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.enabled = false;
+    }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,11 +25,13 @@ public class CameraSightController : MonoBehaviour
         SeizeAlarm();
     }
 
+
     void Update()
     {
         if (GameController.isDetectedByCamera == true)
         {
             RaiseAlarm();
+            audioSource.enabled = true;
         }
             
     }
