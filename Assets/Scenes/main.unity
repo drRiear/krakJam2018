@@ -311,8 +311,6 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: -26358563
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 212880300229830486, guid: effd3c148d24a464bb28afd9d333cbbc,
         type: 2}
       propertyPath: m_SortingLayer
@@ -337,7 +335,6 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
->>>>>>> 510ff545e4b3e66f58ee97bc42f73ec5f1169683
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: effd3c148d24a464bb28afd9d333cbbc, type: 2}
   m_IsPrefabParent: 0
@@ -749,8 +746,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
-<<<<<<< HEAD
-=======
 --- !u!1001 &1547465503
 Prefab:
   m_ObjectHideFlags: 0
@@ -760,7 +755,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4466796555154934, guid: f47100a6caf262f498f5c18d89f0b76e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.04
+      value: -16.77
       objectReference: {fileID: 0}
     - target: {fileID: 4466796555154934, guid: f47100a6caf262f498f5c18d89f0b76e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -813,16 +808,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f47100a6caf262f498f5c18d89f0b76e, type: 2}
   m_IsPrefabParent: 0
->>>>>>> 510ff545e4b3e66f58ee97bc42f73ec5f1169683
 --- !u!4 &1556493194 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4466796555154934, guid: f47100a6caf262f498f5c18d89f0b76e,
     type: 2}
-<<<<<<< HEAD
-  m_PrefabInternal: {fileID: 468346685}
-=======
   m_PrefabInternal: {fileID: 1547465503}
->>>>>>> 510ff545e4b3e66f58ee97bc42f73ec5f1169683
 --- !u!1001 &1641290584
 Prefab:
   m_ObjectHideFlags: 0
