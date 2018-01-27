@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootDelay;
-    [SerializeField] private int amo;
+    [SerializeField] private int ammo;
     [SerializeField] private float shootNoiseRadius;
 
     private AudioSource shootAudioSource;
@@ -54,12 +54,12 @@ public class PlayerAttack : MonoBehaviour
 
     private void Shoot()
     {
-        if (amo == 0) return;
+        if (ammo == 0) return;
 
         attackTimer -= Time.deltaTime;
         if (Input.GetMouseButton(0) && attackTimer <= 0.0f)
         {
-            amo--;
+            ammo--;
             attackTimer = shootDelay;
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shootAudioSource.Play();
@@ -79,7 +79,7 @@ public class PlayerAttack : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            amo += currentDeathComponent.amunition;
+            ammo += currentDeathComponent.amunition;
             currentDeathComponent.amunition = 0;
         }
     }

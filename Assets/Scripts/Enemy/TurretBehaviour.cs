@@ -6,7 +6,7 @@ public class TurretBehaviour : MonoBehaviour
     #region Inspector Vars
     [SerializeField] private float rotationSpeed = 10;
     [SerializeField] private float angleStep = 60;
-    [SerializeField] private float delay = 2;
+    [SerializeField] private float rotateDelay = 2;
     [SerializeField] private float shootDelay = 0.5f;
     [SerializeField] private GameObject projectilePrefub;
     #endregion
@@ -18,6 +18,7 @@ public class TurretBehaviour : MonoBehaviour
     private float timer;
     private Transform playerTransform;
     private Quaternion quaternionStep;
+    public bool isSooted;  
 
     #endregion
 
@@ -27,7 +28,7 @@ public class TurretBehaviour : MonoBehaviour
     {
         playerTransform = CharacterManager.Instance.player.transform;
         quaternionStep.eulerAngles = new Vector3(0.0f, 0.0f, transform.eulerAngles.z + angleStep);
-        timer = delay;
+        timer = rotateDelay;
     }
     
     void Update()
@@ -44,7 +45,6 @@ public class TurretBehaviour : MonoBehaviour
             Time.deltaTime * rotationSpeed);
     }
 
-    bool isSooted;
 
     private void SetState()
     {
@@ -91,7 +91,7 @@ public class TurretBehaviour : MonoBehaviour
 
     private void Rotating()
     {
-        timer = delay;
+        timer = rotateDelay;
 
         Rotate();
 

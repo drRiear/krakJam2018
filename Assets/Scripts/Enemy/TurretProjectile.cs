@@ -24,11 +24,11 @@ public class TurretProjectile : MonoBehaviour
             Destroy(gameObject);
 
         var deathComponent = collision.GetComponent<PlayerDeath>();
-
+        
         if (deathComponent == null) return;
 
         deathComponent.Die();
-
+        Destroy(gameObject);
     }
 
     private void SetDirection()

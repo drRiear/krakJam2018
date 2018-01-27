@@ -5,13 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class InitiateHackScript : MonoBehaviour {
 
+
+    public AudioSource initiateHackSound;
+    
+    void Start()
+    {
+        initiateHackSound = GetComponent<AudioSource>();
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             print("HAKUJ DZIDO");
-            SceneManager.LoadScene("Level_1");
+            initiateHackSound.Play();
+            Invoke("InitiateHack", 0.2f);
         }
+    }
+
+    void InitiateHack()
+    {
+        SceneManager.LoadScene("Level_1");
     }
 
 }
