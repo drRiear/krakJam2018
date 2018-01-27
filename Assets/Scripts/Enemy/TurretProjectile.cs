@@ -10,7 +10,7 @@ public class TurretProjectile : MonoBehaviour
     private void Start()
     {
         playerTransform = CharacterManager.Instance.player.transform;
-        SetDirection();
+        SetRotationDirection();
     }
     private void Update()
     {
@@ -31,7 +31,7 @@ public class TurretProjectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void SetDirection()
+    private void SetRotationDirection()
     { 
         float rot_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
