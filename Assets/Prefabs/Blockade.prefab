@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212285208764270876}
   - component: {fileID: 61744126547004126}
   - component: {fileID: 114299585863965088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blockade
   m_TagString: Untagged
   m_Icon: {fileID: 0}

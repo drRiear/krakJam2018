@@ -6421,6 +6421,9 @@ MonoBehaviour:
   wallsLayer:
     serializedVersion: 2
     m_Bits: 256
+  androidEnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &818377597 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4645199348945326, guid: 9d93e502db14c71488f4c94fe1decb38,
@@ -7800,7 +7803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941946269}
   - component: {fileID: 941946268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlockSwitcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11832,7 +11835,7 @@ GameObject:
   - component: {fileID: 1426408270}
   - component: {fileID: 1426408269}
   - component: {fileID: 1426408268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15888,7 +15891,7 @@ GameObject:
   - component: {fileID: 1874636969}
   - component: {fileID: 1874636968}
   - component: {fileID: 1874636967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

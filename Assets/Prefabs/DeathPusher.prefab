@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4770029148164600}
   - component: {fileID: 212988476244852674}
   - component: {fileID: 61680110263607230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 61645956784693106}
   - component: {fileID: 114325303859877442}
   - component: {fileID: 114277797240253794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (L)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4004836806388216}
   - component: {fileID: 212691080809010758}
   - component: {fileID: 61387300411918530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4314655824247330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TeleportMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4468000669674942}
   - component: {fileID: 212015041457796316}
   - component: {fileID: 61279091951219502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4471240190440388}
   - component: {fileID: 212307150320904054}
   - component: {fileID: 61731728914198644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (U)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4395335563839174}
   - component: {fileID: 212974131696962750}
   - component: {fileID: 61218378219173426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4019646436580052}
   - component: {fileID: 212979399967326692}
   - component: {fileID: 61464849510106710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4838614074197042}
   - component: {fileID: 212961087595983872}
   - component: {fileID: 61145631267140682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 114074652925166162}
   - component: {fileID: 61717162075408704}
   - component: {fileID: 114924990367389120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DeathPusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 4583962147099136}
   - component: {fileID: 212364743684954414}
   - component: {fileID: 61716050929685248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4060416185735688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Changable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 4515849615948438}
   - component: {fileID: 212891793438961382}
   - component: {fileID: 61342356428638268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4037505561034870}
   - component: {fileID: 212126467326018334}
   - component: {fileID: 61192434344419476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (D)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4429521803151030}
   - component: {fileID: 212454782893499944}
   - component: {fileID: 61349037972278720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square (R)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,6 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 0}
+  audio: {fileID: 0}
 --- !u!114 &114325303859877442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,6 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 0}
+  audio: {fileID: 0}
 --- !u!212 &212015041457796316
 SpriteRenderer:
   m_ObjectHideFlags: 1
