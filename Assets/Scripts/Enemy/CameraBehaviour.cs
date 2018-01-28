@@ -85,8 +85,6 @@ public class CameraBehaviour : MonoBehaviour {
     {
         SetDestinationRotation();
 
-        print(destinationRotation);
-
         transform.rotation = Quaternion.RotateTowards(transform.rotation, destinationRotation,
             Time.deltaTime * rotationDirection * rotationSpeed);
     }

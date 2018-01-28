@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorScript : MonoBehaviour {
-
-
+    
     public static Collider2D collider;
     public static SpriteRenderer renderer;
-
     public static AudioSource doorSound;
 
 	void Start () {

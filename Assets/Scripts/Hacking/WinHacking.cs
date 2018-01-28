@@ -17,6 +17,7 @@ public class WinHacking : MonoBehaviour {
         if(other.gameObject.tag == "Player" && !isTriggered) {
             isTriggered = true;
             PlaySource();
+            GameController.isHacked = true;
             Invoke("InitiateScene", LoadDelay);
         }
     }

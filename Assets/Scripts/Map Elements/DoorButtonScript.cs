@@ -5,13 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class DoorButtonScript : MonoBehaviour
 {
-
+    [SerializeField] private GameObject door;
 
     public AudioSource openDoorSound;
+
+    private Collider2D doorCollider;
+    private SpriteRenderer doorRenderer;
+    private AudioSource doorSound;
+
+
 
     void Start()
     {
         openDoorSound = GetComponent<AudioSource>();
+
+        doorCollider = door.GetComponent<BoxCollider2D>();
+        doorRenderer = door.GetComponent<SpriteRenderer>();
+        doorSound = door.GetComponent<AudioSource>();
     }
 
     void OnTriggerStay2D(Collider2D other)

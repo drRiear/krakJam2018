@@ -6354,7 +6354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56169f0475aeaf5498db9d0fe34f58dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stels
+  sceneName: Stels1
   sound: {fileID: 486697641}
   LoadDelay: 1.5
 --- !u!4 &799929131 stripped
