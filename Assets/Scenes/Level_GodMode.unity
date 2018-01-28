@@ -1968,6 +1968,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 212142784560161172, guid: 80080bff68f698f49a35e1c1943daf97,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55ea1ea7bf94d064b8983e1d090f0d15, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80080bff68f698f49a35e1c1943daf97, type: 2}
   m_IsPrefabParent: 0
