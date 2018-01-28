@@ -294,6 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 2076646301}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1 &26427794
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 1528757873}
   audio: {fileID: 0}
+  delay: 0.5
 --- !u!1001 &44259568
 Prefab:
   m_ObjectHideFlags: 0
@@ -631,6 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1 &63080316 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -654,6 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &66264075
 Prefab:
   m_ObjectHideFlags: 0
@@ -906,6 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1 &89507814 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -929,6 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1 &91669627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &102351277
 Prefab:
   m_ObjectHideFlags: 0
@@ -1195,6 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &116174785
 Prefab:
   m_ObjectHideFlags: 0
@@ -1511,7 +1519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &152870406
 Prefab:
@@ -1663,6 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &160220700
 Prefab:
   m_ObjectHideFlags: 0
@@ -2584,6 +2593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 1836881815}
   audio: {fileID: 0}
+  delay: 0.5
 --- !u!4 &270354508 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4645199348945326, guid: 9d93e502db14c71488f4c94fe1decb38,
@@ -2891,6 +2901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1 &314870208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,6 +3024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!4 &327271169 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4645199348945326, guid: 9d93e502db14c71488f4c94fe1decb38,
@@ -3104,6 +3116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1 &340788671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 2122508027}
   audio: {fileID: 0}
+  delay: 0.5
 --- !u!1001 &343428361
 Prefab:
   m_ObjectHideFlags: 0
@@ -3917,6 +3931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 1528757873}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1 &450768163 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -3940,6 +3955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &458486647
 Prefab:
   m_ObjectHideFlags: 0
@@ -7262,6 +7278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 30446085}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1001 &865673433
 Prefab:
   m_ObjectHideFlags: 0
@@ -7533,6 +7550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &887335513
 Prefab:
   m_ObjectHideFlags: 0
@@ -10159,6 +10177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 45664190}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1001 &1137399050
 Prefab:
   m_ObjectHideFlags: 0
@@ -10754,6 +10773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1218091753
 Prefab:
   m_ObjectHideFlags: 0
@@ -10840,6 +10860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1228572625
 Prefab:
   m_ObjectHideFlags: 0
@@ -11227,6 +11248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!4 &1299876144 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4730876422820874, guid: 0faa0ec70a3406545a28f77fe63ca95d,
@@ -12258,6 +12280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1400703422
 Prefab:
   m_ObjectHideFlags: 0
@@ -13038,6 +13061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1515209812
 Prefab:
   m_ObjectHideFlags: 0
@@ -13206,6 +13230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1523469622
 Prefab:
   m_ObjectHideFlags: 0
@@ -13411,6 +13436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 448048695}
   audio: {fileID: 0}
+  delay: 0.5
 --- !u!1 &1529530536 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -13429,6 +13455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1532466465
 Prefab:
   m_ObjectHideFlags: 0
@@ -13515,6 +13542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!4 &1541192207 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4645199348945326, guid: 9d93e502db14c71488f4c94fe1decb38,
@@ -14462,6 +14490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &1682006696
 Prefab:
   m_ObjectHideFlags: 0
@@ -16164,6 +16193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 248250921}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1001 &1842332066
 Prefab:
   m_ObjectHideFlags: 0
@@ -16973,6 +17003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!4 &1903109850 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4871686187716080, guid: 520eef46b38545a43a72b3df78371220,
@@ -18151,6 +18182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 935926995}
   audio: {fileID: 1056406940}
+  delay: 0.5
 --- !u!1001 &2012141140
 Prefab:
   m_ObjectHideFlags: 0
@@ -18917,6 +18949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 21094538}
   audio: {fileID: 0}
+  delay: 0.5
 --- !u!1001 &2092045685
 Prefab:
   m_ObjectHideFlags: 0
@@ -19373,6 +19406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 340788672}
   audio: {fileID: 486697641}
+  delay: 0.5
 --- !u!1001 &2131325623
 Prefab:
   m_ObjectHideFlags: 0

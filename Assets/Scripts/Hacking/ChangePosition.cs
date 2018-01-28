@@ -9,7 +9,7 @@ public class ChangePosition : MonoBehaviour {
     private Collider2D coll;
     private Rigidbody2D rigidb;
     [SerializeField] private AudioSource audio;
-    [SerializeField] private float delay = .5f;
+    [SerializeField] private float delay = 0f;
     #endregion
 
     void OnTriggerEnter2D(Collider2D _coll)
@@ -20,7 +20,6 @@ public class ChangePosition : MonoBehaviour {
         if (_coll.gameObject.tag == "Player")
         {
             coll = _coll;
-            coll.enabled = false;
             Invoke("Teleport", delay);
         }
     }
@@ -28,7 +27,6 @@ public class ChangePosition : MonoBehaviour {
     private void Teleport() {
         coll.transform.position = gameObjectTransform.transform.position;
         rigidb.constraints = RigidbodyConstraints2D.FreezePosition;
-        coll.enabled = true;
         Invoke("SetFree", 0.5f);
         PlaySource();
     }
