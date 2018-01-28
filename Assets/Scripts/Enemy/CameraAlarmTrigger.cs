@@ -38,21 +38,22 @@ public class CameraAlarmTrigger : MonoBehaviour
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
 
-        GameController.isDetectedByCamera = true;
+        RaiseAlarm();
+
+        //GameController.isDetectedByCamera = true;
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
 
+       
+
         StartTimer();
     }
     void Update()
     {
-        if (GameController.isDetectedByCamera)
-            RaiseAlarm();
-        
-        if (!GameController.isDetectedByCamera)
-            ReleaseAlarm();
+
+            
     }
     #endregion
 
@@ -92,6 +93,7 @@ public class CameraAlarmTrigger : MonoBehaviour
         behaviourComponent.state = CameraBehaviour.State.Alarm;
         GameController.isDetectedByCamera = false;
 
+        ReleaseAlarm();
     }
     #endregion
 }

@@ -6,6 +6,8 @@ public class EnemyAndroidBehaviour : MonoBehaviour
     [SerializeField] private float distanceOfView;
     [SerializeField] private float speed;
     [SerializeField] private float inIdleTime;
+    [SerializeField] private List<AudioClip> clips;
+
 
     [SerializeField] private List<Transform> waypointsList;
     private List<Transform> waypointsQueueList;
@@ -14,6 +16,9 @@ public class EnemyAndroidBehaviour : MonoBehaviour
     private float timer;
     private State state;
     private Vector3 direction;
+    private AudioSource audioSource;
+    private bool clipPlayed;
+
 
     private void OnDrawGizmos()
     {
@@ -22,6 +27,8 @@ public class EnemyAndroidBehaviour : MonoBehaviour
     }
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         timer = inIdleTime;
 
         waypointsQueueList = new List<Transform>(waypointsList);
@@ -32,17 +39,27 @@ public class EnemyAndroidBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        LookForPlayer();
-
         switch (state)
         {
             case State.Patrol:
+                LookForPlayer();
                 Patrol();
                 break;
             case State.Idle:
+                LookForPlayer();
                 Idle();
                 break;
             case State.Pursuit:
+
+                if (!clipPlayed)
+                {
+                    clipPlayed = true;  
+
+                    var index = Random.Range(0, clips.Count);
+                    audioSource.clip = clips[index];
+                    audioSource.Play();
+                }
+
                 Pursuit();  
                 break;
         }
@@ -50,9 +67,9 @@ public class EnemyAndroidBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         int wallLayer = (1 << CharacterManager.Instance.wallsLayer.value) + 7;
-        if (collision.gameObject.layer == wallLayer)
+        if (collision.gameObject.layer == wallLayer && state == State.Pursuit)
             state = State.Idle;
-        
+
         var deathComponent = collision.gameObject.GetComponent<PlayerDeath>();
 
         if (deathComponent == null) return;
@@ -73,6 +90,8 @@ public class EnemyAndroidBehaviour : MonoBehaviour
 
         foreach(var hit in hits)
         {
+            if (hit.collider.gameObject.layer == 8)
+                return;
             if (hit.collider.gameObject == CharacterManager.Instance.player)
                 state = State.Pursuit;
         }

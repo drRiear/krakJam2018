@@ -155,7 +155,7 @@ MonoBehaviour:
   startRotation: {x: 0, y: 0, z: 0, w: 0}
   destinationRotation: {x: 0, y: 0, z: 0, w: 0}
   state: 0
-  playerTransform: {fileID: 0}
+  inIdleTimer: 0
 --- !u!114 &114440209602807470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,7 +183,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 323cf513cd84e6c49bd3704a28353917, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,7 +273,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b53706e494d40fd40a3963c998ff4fb1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

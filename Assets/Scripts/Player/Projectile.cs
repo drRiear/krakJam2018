@@ -18,9 +18,9 @@ public class Projectile : MonoBehaviour {
         difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         difference.Normalize();
         difference.z = 0.0f;
-
+        
         float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle - 90);
     }
 
     private void Update()
