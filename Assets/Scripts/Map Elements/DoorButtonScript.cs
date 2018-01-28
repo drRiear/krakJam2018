@@ -26,7 +26,7 @@ public class DoorButtonScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interaction") && GameController.isHacked)
         {
             openDoorSound.Play();
             Invoke("OpenDoor", 1.5f);
