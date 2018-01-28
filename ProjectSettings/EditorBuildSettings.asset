@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2e638928681be5046b0fab80a983df05
   - enabled: 1
-    path: Assets/Scenes/main.unity
-    guid: 3012be1d6ef81474fa449ebbceed6727
-  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 3f0dca3b5576cc2439e47e6b5f38e95e
   - enabled: 1
     path: Assets/Scenes/Level_GodMode.unity
     guid: 88b43b9a7329c864ba4b869e86e2dd42
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ce47169728d50034ab5218d9433f6b7a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c989dcf5043e1554da38622f1215fdb8
+  - enabled: 1
+    path: Assets/Scenes/Stels.unity
+    guid: 3c650a857ac874f4cae3753211401b70

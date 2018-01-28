@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class InitiateHackScript : MonoBehaviour {
 
+    #region Inspector Vars
+    [SerializeField] private AudioSource initiateHackSound;
+    [SerializeField] private string sceneName;
+    #endregion
 
-    public AudioSource initiateHackSound;
-    
     void Start()
     {
         initiateHackSound = GetComponent<AudioSource>();
@@ -24,7 +26,7 @@ public class InitiateHackScript : MonoBehaviour {
 
     void InitiateHack()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene(sceneName);
     }
 
 }

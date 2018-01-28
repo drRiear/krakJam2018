@@ -21,18 +21,16 @@ public class ChangePosition : MonoBehaviour {
             rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
             Invoke("SetFree", 0.5f);
             PlaySource();
-
         }
-            
-
     }
+
     void SetFree()
     {
         rigidbody.constraints = RigidbodyConstraints2D.None;
     }
+
     void PlaySource()
     {
         audio.Play();
     }
-
 }
