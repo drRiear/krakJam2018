@@ -484,7 +484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Imie Nazwisko
+  m_Text: "Micha\u0142 Pi\u0105tkowski"
 --- !u!222 &1373569351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Imie Nazwisko
+  m_Text: Szymon Przybyszewski
 --- !u!222 &1666773816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Imie Nazwisko
+  m_Text: Yurii Danylenko
 --- !u!222 &1887506738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -706,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Imie Nazwisko
+  m_Text: Karol Marszalik
 --- !u!222 &1913709263
 CanvasRenderer:
   m_ObjectHideFlags: 0
