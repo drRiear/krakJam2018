@@ -54,14 +54,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150053091297568}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.3852787, y: 11.4649, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.8433914, w: -0.53729963}
+  m_LocalPosition: {x: -16.15, y: 4, z: 1}
+  m_LocalScale: {x: 0.500001, y: 0.500001, z: 1}
   m_Children:
   - {fileID: 4440589328052408}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -160}
 --- !u!4 &4440589328052408
 Transform:
   m_ObjectHideFlags: 1
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649555355787758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4041606434562846}
@@ -151,11 +151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleOfRotation: 45
   rotationSpeed: 20
-  inIdleTime: 3
-  startRotation: {x: 0, y: 0, z: 0, w: 0}
-  destinationRotation: {x: 0, y: 0, z: 0, w: 0}
-  state: 0
-  inIdleTimer: 0
+  inIdleTime: 2
+  startRotation: {x: -0, y: -0, z: -0.9848078, w: 0.17364825}
+  destinationRotation: {x: 0, y: 0, z: 0.8433914, w: -0.53729963}
+  state: 1
+  inIdleTimer: 2
 --- !u!114 &114440209602807470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,10 +204,10 @@ LineRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  - {x: 0, y: 0, z: 1}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
+  - {x: 1.5, y: -3.5, z: 0}
+  - {x: -1.5, y: -3.5, z: 0}
+  - {x: -0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.1

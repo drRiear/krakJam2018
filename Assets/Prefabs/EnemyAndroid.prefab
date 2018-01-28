@@ -37,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917696459588516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.26, y: 5.01, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.44578266, y: 8.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -171,13 +171,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceOfView: 5
-  speed: 1
+  speed: 3
   inIdleTime: 1
   clips:
   - {fileID: 8300000, guid: ec2b5c15a4cd67f449ea9cc3fdedab11, type: 3}
   - {fileID: 8300000, guid: 9c158ededf26fe645884e650fb49b8b0, type: 3}
   - {fileID: 8300000, guid: 6685b25894ab8594ab5029250eef2ee4, type: 3}
-  waypointsList: []
+  waypointsList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212718832012365574
 SpriteRenderer:
   m_ObjectHideFlags: 1

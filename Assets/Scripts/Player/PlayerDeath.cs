@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public int nextSceneIndex;
+    public string nextSceneName;
 
     public void Die()
     {
         GameController.lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(nextSceneIndex);
+        SceneManager.LoadScene(nextSceneName);
 
         GameController.isDetectedByCamera = false;
         GameController.isDetectedByEnemy = false;
