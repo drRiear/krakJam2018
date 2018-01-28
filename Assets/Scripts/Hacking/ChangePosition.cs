@@ -6,27 +6,36 @@ public class ChangePosition : MonoBehaviour {
 
     #region Variables
     public Transform gameObjectTransform;
-    private Rigidbody2D rigidbody;
+    private Collider2D coll;
+    private Rigidbody2D rigidb;
     [SerializeField] private AudioSource audio;
+    [SerializeField] private float delay = .5f;
     #endregion
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerEnter2D(Collider2D _coll)
     {
-        if(rigidbody==null)
-            rigidbody = coll.GetComponent<Rigidbody2D>();
+        if(rigidb == null)
+            rigidb = _coll.GetComponent<Rigidbody2D>();
          
-        if (coll.gameObject.tag == "Player")
+        if (_coll.gameObject.tag == "Player")
         {
-            coll.transform.position = gameObjectTransform.transform.position;
-            rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
-            Invoke("SetFree", 0.5f);
-            PlaySource();
+            coll = _coll;
+            coll.enabled = false;
+            Invoke("Teleport", delay);
         }
+    }
+
+    private void Teleport() {
+        coll.transform.position = gameObjectTransform.transform.position;
+        rigidb.constraints = RigidbodyConstraints2D.FreezePosition;
+        coll.enabled = true;
+        Invoke("SetFree", 0.5f);
+        PlaySource();
     }
 
     void SetFree()
     {
-        rigidbody.constraints = RigidbodyConstraints2D.None;
+        rigidb.constraints = RigidbodyConstraints2D.None;
     }
 
     void PlaySource()
