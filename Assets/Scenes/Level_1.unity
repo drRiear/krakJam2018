@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 2076646301}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1 &26427794
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 30446085}
   - component: {fileID: 30446087}
   - component: {fileID: 30446086}
-  - component: {fileID: 30446088}
   m_Layer: 0
   m_Name: 3_2_out
   m_TagString: Untagged
@@ -424,20 +423,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &30446088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30446084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 1528757873}
-  audio: {fileID: 0}
-  delay: 0.5
 --- !u!1001 &44259568
 Prefab:
   m_ObjectHideFlags: 0
@@ -2490,7 +2475,6 @@ GameObject:
   - component: {fileID: 248250921}
   - component: {fileID: 248250923}
   - component: {fileID: 248250922}
-  - component: {fileID: 248250924}
   m_Layer: 0
   m_Name: 2_1_out
   m_TagString: Untagged
@@ -2580,20 +2564,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &248250924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 248250920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 1836881815}
-  audio: {fileID: 0}
-  delay: 0.5
 --- !u!4 &270354508 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4645199348945326, guid: 9d93e502db14c71488f4c94fe1decb38,
@@ -3127,7 +3097,6 @@ GameObject:
   - component: {fileID: 340788672}
   - component: {fileID: 340788674}
   - component: {fileID: 340788673}
-  - component: {fileID: 340788675}
   m_Layer: 0
   m_Name: 2_2_out
   m_TagString: Untagged
@@ -3217,20 +3186,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &340788675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 340788671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 2122508027}
-  audio: {fileID: 0}
-  delay: 0.5
 --- !u!1001 &343428361
 Prefab:
   m_ObjectHideFlags: 0
@@ -3931,7 +3886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 1528757873}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1 &450768163 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -7278,7 +7233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 30446085}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1001 &865673433
 Prefab:
   m_ObjectHideFlags: 0
@@ -10177,7 +10132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 45664190}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1001 &1137399050
 Prefab:
   m_ObjectHideFlags: 0
@@ -13333,7 +13288,6 @@ GameObject:
   - component: {fileID: 1528757873}
   - component: {fileID: 1528757875}
   - component: {fileID: 1528757874}
-  - component: {fileID: 1528757876}
   m_Layer: 0
   m_Name: 3_1_out
   m_TagString: Untagged
@@ -13423,20 +13377,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &1528757876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1528757872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 448048695}
-  audio: {fileID: 0}
-  delay: 0.5
 --- !u!1 &1529530536 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
@@ -13616,6 +13556,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1433906140365088, guid: 520eef46b38545a43a72b3df78371220,
     type: 2}
   m_PrefabInternal: {fileID: 872608669}
+--- !u!114 &1575680712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1575680706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c9036b1ba329043b6f9f9ab41b9aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDecay: 0.01
+  shakeIntensity: 0.3
+  transferAudio: {fileID: 1056406940}
+  transferTo: {fileID: 935926995}
 --- !u!1001 &1581957661
 Prefab:
   m_ObjectHideFlags: 0
@@ -16193,7 +16148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 248250921}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1001 &1842332066
 Prefab:
   m_ObjectHideFlags: 0
@@ -16980,30 +16935,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d93e502db14c71488f4c94fe1decb38, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1896014306 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1335339542523516, guid: 9f0eb7248f89cef4796063a48b85e89e,
-    type: 2}
-  m_PrefabInternal: {fileID: 966500310}
 --- !u!4 &1896014307 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4294066642220980, guid: 9f0eb7248f89cef4796063a48b85e89e,
     type: 2}
   m_PrefabInternal: {fileID: 966500310}
---- !u!114 &1896014311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1896014306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 935926995}
-  audio: {fileID: 1056406940}
-  delay: 0.5
 --- !u!4 &1903109850 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4871686187716080, guid: 520eef46b38545a43a72b3df78371220,
@@ -17931,7 +17867,9 @@ Prefab:
       propertyPath: audio
       value: 
       objectReference: {fileID: 1056406940}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114940196537512222, guid: 40c20c01d5b522545b9ac1ea18e13721, type: 2}
+    - {fileID: 114796941601385036, guid: 40c20c01d5b522545b9ac1ea18e13721, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 40c20c01d5b522545b9ac1ea18e13721, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2004156676
@@ -18846,7 +18784,6 @@ GameObject:
   - component: {fileID: 2076646301}
   - component: {fileID: 2076646303}
   - component: {fileID: 2076646302}
-  - component: {fileID: 2076646304}
   m_Layer: 0
   m_Name: 1_1_out
   m_TagString: Untagged
@@ -18936,20 +18873,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &2076646304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076646300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa58e7a30c37824d9db6340414d5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectTransform: {fileID: 21094538}
-  audio: {fileID: 0}
-  delay: 0.5
 --- !u!1001 &2092045685
 Prefab:
   m_ObjectHideFlags: 0
@@ -19406,7 +19329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectTransform: {fileID: 340788672}
   audio: {fileID: 486697641}
-  delay: 0.5
+  delay: 0
 --- !u!1001 &2131325623
 Prefab:
   m_ObjectHideFlags: 0
