@@ -34,7 +34,6 @@ public class CameraAlarmTrigger : MonoBehaviour
         SetLine();
     }
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject != CharacterManager.Instance.player) return;
@@ -82,9 +81,9 @@ public class CameraAlarmTrigger : MonoBehaviour
             alarmTimer -= Time.deltaTime;
         else if (isBig)
         {
+            behaviourComponent.state = CameraBehaviour.State.Idle;
             isBig = false;
             transform.localScale /= sceleMultiplier;
-            behaviourComponent.state = CameraBehaviour.State.Rotating;
         }
     }
 

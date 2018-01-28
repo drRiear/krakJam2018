@@ -12,16 +12,19 @@ public class CameraBehaviour : MonoBehaviour {
     [SerializeField] private float inIdleTime;
     #endregion
 
+    #region Hiden Vars
+
     [HideInInspector] public Quaternion startRotation;
     [HideInInspector] public Quaternion destinationRotation;
-    //[HideInInspector]
     public State state = 0;
+
+    #endregion
 
     #region Private Vars
     private Transform playerTransform;
     private Quaternion finalRotation;
     private float rotationDirection = 1;
-    private float inIdleTimer;
+    public float inIdleTimer;
     #endregion
 
     #region Unity Events
@@ -61,6 +64,10 @@ public class CameraBehaviour : MonoBehaviour {
             case State.LockOnPlayer:
                 Lock();
                 break;
+            case State.Alarm:
+                destinationRotation = startRotation;
+                
+                break; 
         }
     }
 
@@ -78,8 +85,10 @@ public class CameraBehaviour : MonoBehaviour {
     {
         SetDestinationRotation();
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, destinationRotation,
-                Time.deltaTime * rotationDirection * rotationSpeed);
+        print(destinationRotation);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, destinationRotation,
+            Time.deltaTime * rotationDirection * rotationSpeed);
     }
 
     private void SetDestinationRotation()

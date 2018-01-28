@@ -20,7 +20,10 @@ public class TurretProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == CharacterManager.Instance.wallsLayer)
+        
+        var wallIndex = (1 << CharacterManager.Instance.wallsLayer.value) + 7;
+
+        if (collision.gameObject.layer == wallIndex)
             Destroy(gameObject);
 
         var deathComponent = collision.GetComponent<PlayerDeath>();
@@ -33,8 +36,8 @@ public class TurretProjectile : MonoBehaviour
 
     private void SetRotationDirection()
     { 
-        float rot_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+        float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void SetDifference()

@@ -19,8 +19,8 @@ public class Projectile : MonoBehaviour {
         difference.Normalize();
         difference.z = 0.0f;
 
-        float rot_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void Update()
@@ -35,11 +35,15 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == CharacterManager.Instance.wallsLayer)
+        var wallIndex = (1 << CharacterManager.Instance.wallsLayer.value) + 7;
+
+        if (collision.gameObject.layer == wallIndex)
             Destroy(gameObject);
 
-        var deathComponent = collision.GetComponent<PlayerDeath>();
-        
+        var deathComponent = collision.GetComponent<Death>();
+
+        if (deathComponent == null) return;
+
         deathComponent.Die();
         
     }
